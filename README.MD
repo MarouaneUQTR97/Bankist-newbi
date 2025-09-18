@@ -24,3 +24,11 @@ git add
 git commit -m " Titre du commit "
 git push origin master
 ```
+
+## Creation d'une branche
+
+```Bash
+git chekout -b NOM_BRANCHE
+
+
+```
