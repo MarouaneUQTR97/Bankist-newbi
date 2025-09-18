@@ -2,7 +2,17 @@
 
 ## Initialisation du depo
 
-'''Bash
-it init
+```Bash
+Git init
 Git remote add origin_SSH_REPO
-'''
+```
+
+## Rédiger un commit
+
+```
+
+Titre du commit
+
+Desctiption de notre commit avec des informations sur l'évolution du projet
+
+```
