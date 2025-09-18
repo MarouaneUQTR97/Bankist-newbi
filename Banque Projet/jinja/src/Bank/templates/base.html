@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&amp;display=swap"
+      rel="stylesheet" />
+    {%block cssStyle%}{%endblock%}
+    {%block jsName%}
+    {%endblock%}
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="popup"></div>
+    <div class="spinner">
+      <img class="load" src="{% static 'css/icons/Loader.svg' %}" alt="" />
+    </div>
+    <header class="sticky">
+        <div class="logo">
+          <ion-icon class="icon" name="home-outline"></ion-icon>
+          <p>Bankist</p>
+        </div>
+        <nav class="navBar">
+        {%block header%}
+        {% endblock %}
+      </header>
+      {%block main%}
+      {%endblock%}
+      {% if error %}
+        <script>
+          const popup = document.querySelector(".popup");
+          const spinner = document.querySelector(".spinner");
+          spinner.style.display = "block"
+          function showPopup(which) {
+            spinner.style.display = "none";
+              popup.classList.toggle(which);
+              setTimeout(() => {
+                popup.removeChild(popup.firstElementChild);
+                popup.classList.toggle(which);
+              }, 3000);
+            }
+          setTimeout(() => {
+              spinner.style.display = "none";
+              popup.insertAdjacentHTML("beforeend", `<p>{{error}}</p>`);
+              popup.style.backgroundImage = "linear-gradient(to top,#f03e3e,#ffec99)";
+              showPopup("activeFalse");
+        }, 3000);
+        </script>
+      {% endif %}
+      {% if success %}
+        <script>
+          const popup = document.querySelector(".popup");
+          const spinner = document.querySelector(".spinner");
+          spinner.style.display = "block"
+          function showPopup(which) {
+            spinner.style.display = "none";
+              popup.classList.toggle(which);
+              setTimeout(() => {
+                popup.removeChild(popup.firstElementChild);
+                popup.classList.toggle(which);
+              }, 3000);
+            }
+          spinner.style.display = "block";
+          setTimeout(() => {
+            spinner.style.display = "none";
+            popup.insertAdjacentHTML("beforeend", `<p>{{success}}</p>`);
+            popup.style.backgroundImage = "linear-gradient(to top,#4bbb7d ,#d3f9d8)";
+            showPopup("activeTrue");
+          }, 1500);
+        </script>
+      {% endif %}
+
+
+
+  </body>
+  
+</html>

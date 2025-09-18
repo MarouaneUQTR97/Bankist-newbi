@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&amp;display=swap"
+      rel="stylesheet" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <link rel="stylesheet" href="../static/css/manage.css">
+      
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="sticky">
+        <div class="logo">
+          <ion-icon class="icon" name="home-outline"></ion-icon>
+          <p>Bankist</p>
+        </div>
+        <nav class="navBar">
+        <div class="Main-list">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="pagelogin.html">About</a></li>
+            <li><a href="results.html">Results</a></li>
+          </ul>
+        </div>
+        </nav>
+        </div>
+    </header>
+    <main class="sections">
+        <section class="options">
+          <div class="selections">
+            <a href="">Account Settings</a>
+            <a href="">Open New Account</a>
+          </div>
+          <button class="btn mng save">Save changes</button>
+        </section>
+        <section class="fields">
+          <div class="divField">
+            <div class="fieldsnames firstName">First Name :</div>
+            <span class="fName" data-type="text"></span>
+            <button class="btn mng">Modifier</button>
+          </div>
+          <div class="divField">
+            <div class="fieldsnames lastName">Last Name :</div>
+            <span class="lName" data-type="text"></span>
+            <button class="btn mng">Modifier</button>
+          </div>
+          <div class="divField">
+            <div class="fieldsnames email">Email :</div>
+            <span class="last-Name" data-type="email"></span>
+            <button class="btn mng">Modifier</button>
+          </div>
+          <div class="divField">
+            <div class="fieldsnames passwd">Password :</div>
+            <span class="passw" data-type="password"></span>
+            <button class="btn mng">Modifier</button>
+          </div>
+          <div class="divField">
+            <div class="fieldsnames gender">Gender :</div>
+            <span class="gender"><form action="" class="radform">
+              
+            </form></span>
+            <button class="btn mng">Modifier</button>
+          </div>
+        </section>
+    </main>
+  </body>
+  <script type="module"  src="/static/Views/mngAccView.js" ></script>
+</html>
+
+
+<!-- 
+spans<input class="inptFields" type="text">
+<input class="inptFields" type="text">
+<input class="inptFields" type="email">
+<input class="inptFields" type="password">
+<input class="inptFields" type="date">
+<input class="inptFields" type="password">
+<label for="Male"
+                ><input value="Male" type="radio" name="gen" class="male" />
+                Male
+              </label>
+              <label for="Female"
+                ><input value="Female" type="radio" name="gen" class="female" />
+                Female
+              </label>
+              <label for="Other"
+                ><input value="Other" type="radio" name="gen" class="Other" />
+                Other
+              </label>
+ -->

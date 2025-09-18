@@ -1,0 +1,72 @@
+@media (max-width: 1320px) {
+  container {
+    max-width: 100rem;
+  }
+
+  h1 {
+    font-size: 4.6em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+
+  a {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 1050px) {
+  header {
+    height: 8em;
+  }
+  .burger {
+    display: block;
+  }
+
+  .Main-list {
+    background-color: transparent;
+  }
+
+  .Main-list ul {
+    background-color: transparent;
+  }
+  .Main-list li {
+    background-color: transparent;
+  }
+
+  .Main-list li a {
+    background-color: transparent;
+  }
+  .navBar {
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    height: 100vh;
+    gap: 10em;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.75s ease-in-out;
+  }
+
+  .Main-list ul {
+    flex-direction: column;
+  }
+  .login {
+    width: 100vw;
+    border-radius: 1rem;
+    margin-right: auto;
+  }
+  .active {
+    transform: translateX(0%);
+  }
+
+  .supportClass {
+    display: block;
+  }
+
+  .supportClass2 {
+    display: flex;
+  }
+}
