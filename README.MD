@@ -1,4 +1,4 @@
-# Documentation du tuto Gthub avec Git
+# Documentation Git , Document serie INF1001
 
 ## Initialisation du depo
 
